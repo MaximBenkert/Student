@@ -1,7 +1,9 @@
+import java.util.Objects;
+
 public class Student {
     private String name;
     private int matrikelnummer;
-    private int semestreCount;
+
 
     public String getName (){
         return name;
@@ -9,9 +11,7 @@ public class Student {
     public int getMatrikelnummer(){
         return matrikelnummer;
     }
-    public int getSemestreCount(){
-        return semestreCount;
-    }
+
 
     public void setName(String name){
         this.name = name;
@@ -22,12 +22,28 @@ public class Student {
         this.matrikelnummer = matrikelnummer;
     }
 
-    public void setSemestreCount(int semestreCount) {
-        this.semestreCount = semestreCount;
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", matrikelnummer=" + matrikelnummer +
+                ", semestreCount=" +
+                '}';
     }
 
-    public String toString  () {
-        return (this.name + " " + this.matrikelnummer + " " + this.semestreCount);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return matrikelnummer == student.matrikelnummer && Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, matrikelnummer);
     }
 
     public Student(){
@@ -36,6 +52,8 @@ public class Student {
     public Student (String name, int matrikelnummer, int semestreCount){
         this.matrikelnummer = matrikelnummer;
         this.name = name;
-        this.semestreCount = semestreCount;
+
     }
+
+
 }
