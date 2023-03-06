@@ -13,16 +13,29 @@ public class Student {
         return semestreCount;
     }
 
-    public void setName(String newName){
-        name = newName;
+    public void setName(String name){
+        this.name = name;
     }
 
-    public void setMatrikelnummer (int newMatrikelnummer)
+    public void setMatrikelnummer (int matrikelnummer)
     {
-        matrikelnummer = newMatrikelnummer;
+        this.matrikelnummer = matrikelnummer;
     }
 
-    public void setSemestreCount(int newSemestreCount) {
-        semestreCount = newSemestreCount;
+    public void setSemestreCount(int semestreCount) {
+        this.semestreCount = semestreCount;
+    }
+
+    public String toString  () {
+        return (this.name + " " + this.matrikelnummer + " " + this.semestreCount);
+    }
+
+    public Student(){
+
+    }
+    public Student (String name, int matrikelnummer, int semestreCount){
+        this.matrikelnummer = matrikelnummer;
+        this.name = name;
+        this.semestreCount = semestreCount;
     }
 }
