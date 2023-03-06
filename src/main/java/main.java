@@ -3,13 +3,13 @@ public class main {
 
         Student newStudent = new Student();
 
-        newStudent.name = "Max";
-        newStudent.matrikelnummer = 44444444;
-        newStudent.semestreCount = 4;
+        newStudent.setName("Max");
+        newStudent.setMatrikelnummer(444444);
+        newStudent.setSemestreCount(4);
 
-        System.out.println(newStudent.name);
-        System.out.println(newStudent.semestreCount);
-        System.out.println(newStudent.matrikelnummer);
+        System.out.println(newStudent.getName());
+        System.out.println(newStudent.getSemestreCount());
+        System.out.println(newStudent.getMatrikelnummer());
 
 
     }
