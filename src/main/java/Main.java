@@ -4,7 +4,7 @@ public class Main {
         Student newStudent = new Student();
 
         newStudent.setName("Max");
-        newStudent.setMatrikelnummer(444444);
+        newStudent.setMatrikelnummer(4444444);
         newStudent.setSemestreCount(4);
 
         System.out.println(newStudent.getName());
